@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script>
+$('#navigation li').live('click', function() { 
+$('#navigation li').removeClass('selected');
+$(this).addClass('selected');
+})
+</script>
+
+<style>
+#navigation li {
+list-style:none;
+float:left;
+padding:5px;
+}
+#navigation {
+cursor:pointer;
+}
+#navigation .selected {
+background-color:red;
+color:white;
+}
+a{color:black;text-decoration:none;}
+</style>
+
+
+<title>practice1</title>
+</head>
+
+<body>
+
+<h2>h2 title</h2>
+
+<ul id="navigation">
+<li>html</li>
+<li class="selected">css</li>
+<li>javascript</li>
+</ul>
+<br>
+<br>
+<ol id="withoutdeco">
+<li><a href="javascript:void(0);">html</a></li>
+<li><a href="javascript:void(0);">css</a></li>
+<li><a href="javascript:void(0);">javascript</a></li>
+</ol>
+<a style="text-decoration:underline">javascript:void의 밑줄은 지우고 여기 밑줄은 생기게 하기</a>
+<p id="intro">ohhoho</p>
+<strong>This is <u>Test Page</u>.</strong>
+<br>
+<script>
+var myElement = document.getElementById("intro");
+document.write("The text from the intro paragraph is " + myElement.innerHTML);
+</script>
+<br>
+<input type = "button" value = "day" onclick = "
+document.querySelector('body').style.backgroundColor='white';
+document.querySelector('body').style.color='black';">
+<input type = "button" value = "night" onclick = "
+document.querySelector('body').style.backgroundColor='black';
+document.querySelector('body').style.color='white';">
+
+<input type="button" value="hi" onclick="alert('hi')">
+<input type="text" onchange="alert('onchange')">
+<input type="text" onkeydown="alert('onkeydown')">
+
+<p>Study for making website<br>about RiverLevel!</p>
+
+<p>
+<script src='crawler_youtube_example_1.js'>
+</script>
+</p>
+
+<p><script>
+document.write('1+1 = ', 1+1);
+document.write('<br>');
+document.write('document.write');
+</script></p>
+
+<p>
+<script src='crawler_youtube_example_2.js'>
+</script>
+</p>
+
+<div class="welcome"></div>
+<div class="welcome"></div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+$('.welcome').html('hello world! coding everyone!').css('background-color','yellow');
+</script>
+
+<img src="남가좌동.jpg" width="10%">
+</body>
+</html>
