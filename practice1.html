@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>왜 최신버전은 navigation이 안될까..-->
+
 <script>
 $('#navigation li').live('click', function() { 
 $('#navigation li').removeClass('selected');
@@ -24,7 +26,7 @@ cursor:pointer;
 background-color:red;
 color:white;
 }
-a{color:black;text-decoration:none;}
+li a{color:black;text-decoration:none;}
 </style>
 
 
@@ -87,10 +89,7 @@ document.write('document.write');
 
 <div class="welcome"></div>
 <span class="welcome"></span>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript">
-$('.welcome').html('hello world! coding everyone!').css('background-color','yellow');
-</script>
+<script> $('.welcome').html('hello world! coding everyone!').css('background-color','yellow'); </script>
 
 <img src="profile.jpg" width="50%">
 </body>

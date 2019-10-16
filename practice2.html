@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
 <script>
 $('#navigation li').live('click', function() { 
 $('#navigation li').removeClass('selected');
@@ -20,13 +21,14 @@ color:red;
 }
 #grid {
 display:grid;
-grid-template-columns:280px 1fr;
+grid-template-columns:200px 1fr;
 }
 #article {
 padding:25px;
 }
-#portal {
+#portal a {
 text-decoration:none;
+color:blue;
 }
 
 body {
@@ -42,15 +44,16 @@ margin:0;
 }
 ol {
 border-right:3px solid gray;
-width:190px;
+width:120px;
 margin:0;
 padding:40px;
-font-size:30px;
+font-size:20px;
 }
 </style>
 
-<title>practice2</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<title>practice2</title>
 </head>
 
 <body>
@@ -75,10 +78,11 @@ font-size:30px;
 </ul>
 </li>
 
-<li>javascript</a></li>
+<li>javascript</li>
 </ol>
+
 <div id="article">
-<p id="portal"><a href="practice1.html" target="_blank">go to practice1</a></p>
+<p id="portal"><a href="practice1.html" target="_blank">go to practice1 by clicking me</a></p>
 <p><a href="https://www.w3.org/TR/html5/" target="_blank" title="html5 speicification"><u>Hypertext Markup Language</u></a> is <strong>the standard markup language</strong> for creating and web applications. target="_blank"는 새탭에서 열기이고 title="html5 speicification"는 툴팁이라고 하는 마우스가져갔을때 정보가 뜸</p>
 
 <img src="profile.jpg" width="20%">
