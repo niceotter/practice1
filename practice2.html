@@ -12,44 +12,7 @@ $(this).addClass('selected');
 })
 </script>
 
-<style>
-#navigation {
-cursor:pointer;
-}
-#navigation .selected {
-color:red;
-}
-#grid {
-display:grid;
-grid-template-columns:200px 1fr;
-}
-#article {
-padding:25px;
-}
-#portal a {
-text-decoration:none;
-color:blue;
-}
-
-body {
-margin:0;
-}
-h1 {
-text-align:center;
-font-size:45px;
-color:black;
-border-bottom:3px solid gray;
-padding:20px;
-margin:0;
-}
-ol {
-border-right:3px solid gray;
-width:120px;
-margin:0;
-padding:40px;
-font-size:20px;
-}
-</style>
+<link rel="stylesheet" href="practice2.css">
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -84,8 +47,10 @@ font-size:20px;
 <div id="article">
 <p id="portal"><a href="practice1.html" target="_blank">go to practice1 by clicking me</a></p>
 <p><a href="https://www.w3.org/TR/html5/" target="_blank" title="html5 speicification"><u>Hypertext Markup Language</u></a> is <strong>the standard markup language</strong> for creating and web applications. target="_blank"는 새탭에서 열기이고 title="html5 speicification"는 툴팁이라고 하는 마우스가져갔을때 정보가 뜸</p>
+</div>
 
-<img src="profile.jpg" width="20%">
+<div id="profile">
+<img src="profile.jpg" width="80%">
 <p>
 Hi<br>
 Hello
