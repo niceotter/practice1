@@ -50,18 +50,37 @@ if (this.value === 'day'){
 DocQue.backgroundColor = 'white';
 DocQue.color = 'black';
 this.value = 'night';
+
+var alist =document.querySelectorAll('a');
+var i = 0;
+while (i < alist.length){
+alist[i].style.color = 'powderblue';
+i = i++;
+}
+
 }
 else{
 DocQue.backgroundColor = 'black';
 DocQue.color = 'white';
 this.value = 'day';
+
+var alist =document.querySelectorAll('a');
+var i = 0;
+while (i < alist.length){
+alist[i].style.color = 'purple';
+i = i++;
+}
+
 }">
+
 &lt;&lt;&lt; toggle
 <br>
 document.querySelector('#~~')는 this로 치환가능
 <br>
 document.querySelector('body').style는 var ~~로 치환가능
 <br>
+
+<!--
 
 <input type = "button" value = "day" onclick = "
 document.querySelector('body').style.backgroundColor='white';
@@ -70,7 +89,8 @@ document.querySelector('body').style.color='black';">
 document.querySelector('body').style.backgroundColor='black';
 document.querySelector('body').style.color='white';
 document.querySelector('.welcome').style.color='blue';">
-<!--왜 div는 blue가 되고 span은 하얄까..-->
+
+왜 div는 blue가 되고 span은 하얄까..-->
 
 <br><br>
 <div>Comparison Operators & Boolean</div>

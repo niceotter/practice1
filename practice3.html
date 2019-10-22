@@ -18,6 +18,66 @@ EE.on('click', '#id', function() {alert('div method');});
 <p>Jquery 3 &lt;on&gt; method</p>
 <div><a href="javascript:void(0);">Aaaaaaaaa</a></div>
 <span id='id'><a href="javascript:void(0);">Bbbbbbbbbbbbbb</a></span>
+
+<br>
+
+<h3>반복문</h3>
+<script>
+var i = 0;
+while(i<3){
+document.write('one')
+document.write('two<br>')
+i = i+1
+}
+</script>
+
+<br>
+
+<h3>리스트</h3>
+<script>
+var list = ['apple', 'banana', 'cherry', ];
+var i = 0;
+while (i < list.length){
+document.write('<li>'+list[i]+'</li>');
+i = i++;
+};
+</script>
+
+<br>
+
+<script>
+function two() {
+document.write('melon');
+document.write('nutella');
+}
+
+document.write('papaya');
+two();
+document.write('olive');
+two();
+</script>
+
+<br>
+
+<script>
+function sum(a, b) {
+document.write(a+b+'<br>')
+}
+
+sum(63594, 6194)
+</script>
+
+<br>
+
+<script>
+function sum_re(a, b) {
+return (a+b)
+}
+
+document.write('<div style="color:yellow">'+sum(63594, 6194)+'</div>');
+</script>
+
+
 </body>
 
 </html>
