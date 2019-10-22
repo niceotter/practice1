@@ -3,6 +3,13 @@
 <head>
 <meta charset="utf-8">
 
+<style>
+#grid {
+display:grid;
+grid-template-columns:45% 45%;
+}
+</style>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <script>
@@ -14,8 +21,9 @@ EE.on('click', '#id', function() {alert('div method');});
 <title>title</title></head>
 
 <body>
-
-<p>Jquery 3 &lt;on&gt; method</p>
+<div id='grid'>
+<div id='sector1'>
+<h3>Jquery 3 &lt;on&gt; method</h3>
 <div><a href="javascript:void(0);">Aaaaaaaaa</a></div>
 <span id='id'><a href="javascript:void(0);">Bbbbbbbbbbbbbb</a></span>
 
@@ -27,33 +35,33 @@ var i = 0;
 while(i<3){
 document.write('one')
 document.write('two<br>')
-i = i+1
+i = ++i
 }
 </script>
 
 <br>
 
-<h3>리스트</h3>
 <script>
-var list = ['apple', 'banana', 'cherry', ];
+var list = ['apple', 'banana', 'cherry'];
 var i = 0;
 while (i < list.length){
 document.write('<li>'+list[i]+'</li>');
-i = i++;
+i = ++i;
 };
 </script>
 
 <br>
 
+<h3>함수</h3>
 <script>
 function two() {
-document.write('melon');
-document.write('nutella');
+document.write('melon<br>');
+document.write('nutella<br>');
 }
 
-document.write('papaya');
+document.write('papaya<br>');
 two();
-document.write('olive');
+document.write('olive<br>');
 two();
 </script>
 
@@ -74,10 +82,30 @@ function sum_re(a, b) {
 return (a+b)
 }
 
-document.write('<div style="color:yellow">'+sum(63594, 6194)+'</div>');
+document.write('<div style="color:pink">'+sum_re(63594, 6194)+'</div>');
+</script>
+</div>
+<div id='sector2'>
+<h3>객체</h3>
+<p>배열(리스트)은 순서대로 대괄호[], <br>객체(딕셔너리)는 무작위로 중괄호{}</p>
+<script>
+var list = ['a', 'b'];
+var dict = {'A':'a', 'B':'b'};
+dict['C']='c';
+
+document.write(list + '<br>');
+document.write(dict.A + ',' + dict.B + ',' + dict.C + '<br>');
+document.write(Object.keys(dict) + '<br>' + '<br>');
+
+for (var key in dict) {
+document.write (key + ' : ' + dict[key] + '<br>');
+}
+
 </script>
 
 
+</div>
+</div>
 </body>
 
 </html>

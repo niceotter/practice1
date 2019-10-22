@@ -4,9 +4,10 @@
 <meta charset="utf-8">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!--
 <script src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
 <script src="https://requirejs.org/docs/release/2.3.6/r.js"></script>
-
+-->
 <script>
 $(document).on('click', '#navigation li', function() { 
 $('#navigation li').removeClass('selected');
@@ -35,7 +36,7 @@ $(this).addClass('selected');
 <li><a href="javascript:void(0);">css</a></li>
 <li><a href="javascript:void(0);">javascript</a></li>
 </ol>
-<a style="text-decoration:underline">javascript:void의 밑줄은 지우고 여기 밑줄은 생기게 하기</a>
+<p style="text-decoration:underline">javascript:void의 밑줄은 지우고 여기 밑줄은 생기게 하기</p>
 <p id="intro">ohhoho</p>
 <strong>This is <u>Test Page</u>.</strong>
 <br>
@@ -44,6 +45,17 @@ var myElement = document.getElementById("intro");
 document.write("The text from the intro paragraph is " + myElement.innerHTML);
 </script>
 <br>
+
+<script>
+function link_color(color) {
+var alist =document.querySelectorAll('a');
+var i = 0;
+while (i < alist.length){
+alist[i].style.color = color;
+i = i+1;
+}}
+</script>
+
 <input type = "button" value = "night" onclick = "
 var DocQue= document.querySelector('body').style
 if (this.value === 'day'){
@@ -51,26 +63,15 @@ DocQue.backgroundColor = 'white';
 DocQue.color = 'black';
 this.value = 'night';
 
-var alist =document.querySelectorAll('a');
-var i = 0;
-while (i < alist.length){
-alist[i].style.color = 'powderblue';
-i = i++;
+link_color('purple');
 }
 
-}
 else{
 DocQue.backgroundColor = 'black';
 DocQue.color = 'white';
 this.value = 'day';
 
-var alist =document.querySelectorAll('a');
-var i = 0;
-while (i < alist.length){
-alist[i].style.color = 'purple';
-i = i++;
-}
-
+link_color('powderblue')
 }">
 
 &lt;&lt;&lt; toggle
