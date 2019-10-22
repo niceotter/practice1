@@ -1,5 +1,10 @@
 #navigation {
 cursor:pointer;
+border-right:3px solid gray;
+width:120px;
+margin:0;
+padding:40px;
+font-size:20px;
 }
 #navigation .selected {
 color:red;
@@ -15,7 +20,8 @@ font-size:20px;
 #profile {
 padding:25px;
 }
-#portal a {
+
+.portal a {
 text-decoration:none;
 color:blue;
 font-weight:bold;
@@ -32,16 +38,9 @@ border-bottom:3px solid gray;
 padding:20px;
 margin:0;
 }
-ol {
-border-right:3px solid gray;
-width:120px;
-margin:0;
-padding:40px;
-font-size:20px;
-}
 
 @media(max-width:800px){
 #grid {display:block;}
-ol {border-right:none; border-bottom:3px solid gray;}
+#navigation {border-right:none; border-bottom:3px solid gray;}
 img {width:50%}
 }

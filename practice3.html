@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+var EE = $(document)
+EE.on('click', 'div a', function() {alert('a method'); css.background-color('yellow');});
+EE.on('click', '#id', function() {alert('div method');});
+</script>
+
+<title>title</title></head>
+
+<body>
+
+<p>Jquery 3 &lt;on&gt; method</p>
+<div><a href="javascript:void(0);">Aaaaaaaaa</a></div>
+<span id='id'><a href="javascript:void(0);">Bbbbbbbbbbbbbb</a></span>
+</body>
+
+</html>

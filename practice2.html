@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <script>
-$('#navigation li').live('click', function() { 
+$(document).on('click', '#navigation li', function() { 
 $('#navigation li').removeClass('selected');
 $(this).addClass('selected');
-})
+$('.navsel').css('display:none');
+$('.selected .navsel').css('display:block');});
 </script>
 
 <link rel="stylesheet" href="practice2.css">
@@ -27,7 +28,7 @@ $(this).addClass('selected');
 <ol id="navigation">
 <li class="selected">html<i class="material-icons";>keyboard_arrow_down</i></a>
 
-<ul id="navsecond" class="selsecond" style="display:block; color:black;">
+<ul class="navsel" style="display:block; color:black;">
 <li>apple</li>
 <li>blueberry</li>
 </ul>
@@ -35,7 +36,7 @@ $(this).addClass('selected');
 
 <li>css<i class="material-icons">keyboard_arrow_down</i></a>
 
-<ul id="navsecond" style="display:none; color:black;">
+<ul class="navsel" style="display:none; color:black;">
 <li>grapes</li>
 <li>pears</li>
 </ul>
@@ -45,7 +46,8 @@ $(this).addClass('selected');
 </ol>
 
 <div id="article">
-<p id="portal"><a href="practice1.html" target="_blank">go to practice1 by clicking me</a></p>
+<p class="portal"><a href="practice1.html" target="_blank">go to practice1 by clicking me</a></p>
+<p class="portal"><a href="practice3.html" target="_blank">go to practice3 about &lt;on&gt; method in Jquery Version 3 by clicking me</a></p>
 <p><a href="https://www.w3.org/TR/html5/" target="_blank" title="html5 speicification"><u>Hypertext Markup Language</u></a> is <strong>the standard markup language</strong> for creating and web applications. target="_blank"는 새탭에서 열기이고 title="html5 speicification"는 툴팁이라고 하는 마우스가져갔을때 정보가 뜸</p>
 </div>
 

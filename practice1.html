@@ -3,11 +3,12 @@
 <head>
 <meta charset="utf-8">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>왜 최신버전은 navigation이 안될까..-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
+<script src="https://requirejs.org/docs/release/2.3.6/r.js"></script>
 
 <script>
-$('#navigation li').live('click', function() { 
+$(document).on('click', '#navigation li', function() { 
 $('#navigation li').removeClass('selected');
 $(this).addClass('selected');
 })
