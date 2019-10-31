@@ -6,11 +6,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <script>
-$(document).on('click', '#navigation li', function() { 
-$('#navigation li').removeClass('selected');
-$(this).addClass('selected');
-$('.navsel').css('display:none');
-$('.selected .navsel').css('display:block');});
+$(function(){
+$("ul.sub").hide();
+$("ul.menu li").hover(function(){
+    $("ul:not(:animated)",this).slideDown("fast");
+    },
+    function(){
+        $("ul",this).slideUp("fast");
+    });
+});
 </script>
 
 <link rel="stylesheet" href="practice2.css">
@@ -25,25 +29,22 @@ $('.selected .navsel').css('display:block');});
 <h1>HTML</h1>
 
 <div id="grid">
-<ol id="navigation">
-<li class="selected">html<i class="material-icons";>keyboard_arrow_down</i></a>
-
-<ul class="navsel" style="display:block; color:black;">
-<li>apple</li>
-<li>blueberry</li>
+<ul id="navigation" class="menu">
+    <li><a href="#">html<i class="material-icons">keyboard_arrow_down</i></a>
+        <ul class="sub">
+            <li><a href="#">apple</a></li>
+            <li><a href="#">blueberry</a></li>
+        </ul>
+    </li>
+    <li><a href="#">css<i class="material-icons">keyboard_arrow_down</i></a>
+        <ul class="sub">
+            <li><a href="#">grapes</a></li>
+            <li><a href="#">pears</a></li>
+        </ul>
+    </li>
+    <li>javascript
+    </li>
 </ul>
-</li>
-
-<li>css<i class="material-icons">keyboard_arrow_down</i></a>
-
-<ul class="navsel" style="display:none; color:black;">
-<li>grapes</li>
-<li>pears</li>
-</ul>
-</li>
-
-<li>javascript</li>
-</ol>
 
 <div id="article">
 <p class="portal"><a href="practice1.html" target="_blank">go to practice1 by clicking me</a></p>

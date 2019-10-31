@@ -27,6 +27,11 @@ color:blue;
 font-weight:bold;
 }
 
+.menu li a{
+display:block;
+text-decoration:none;
+}
+
 body {
 margin:0;
 }
