@@ -88,6 +88,7 @@ document.write('<div style="color:pink">'+sum_re(63594, 6194)+'</div>');
 <div id='sector2'>
 <h3>객체</h3>
 <p>배열(리스트)은 순서대로 대괄호[], <br>객체(딕셔너리)는 무작위로 중괄호{}</p>
+
 <script>
 var list = ['a', 'b'];
 var dict = {'A':'a', 'B':'b'};
@@ -100,9 +101,19 @@ document.write(Object.keys(dict) + '<br>' + '<br>');
 for (var key in dict) {
 document.write (key + ' : ' + dict[key] + '<br>');
 }
-
 </script>
 
+
+<h3>Object안에 Method 만들어서 Property 출력</h3>
+<script>
+dict = {"A":"a","B":"b","C":"c"};
+dict.showAll = function(){
+for (var key in this) {
+if ('showAll' != key) {
+document.write(key + ' : ' + this[key] + '<br>');
+};};};
+dict.showAll();
+</script>
 
 </div>
 </div>

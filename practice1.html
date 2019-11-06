@@ -4,10 +4,7 @@
 <meta charset="utf-8">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!--
-<script src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
-<script src="https://requirejs.org/docs/release/2.3.6/r.js"></script>
--->
+
 <script>
 $(document).on('click', '#navigation li', function() { 
 $('#navigation li').removeClass('selected');
@@ -46,15 +43,8 @@ document.write("The text from the intro paragraph is " + myElement.innerHTML);
 </script>
 <br>
 
-<script>
-function link_color(color) {
-var alist =document.querySelectorAll('a');
-var i = 0;
-while (i < alist.length){
-alist[i].style.color = color;
-i = i+1;
-}}
-</script>
+<p><a href="https://opentutorials.org/course/1375/6656">제어 대상 찾기</a>라는 코딩 강의인데 이걸 왜 여기에다 적어놨었지..</p>
+<p>아 아니구나 <a href="https://opentutorials.org/module/3180/18881">이거</a>구나 아래에 토글 누를때 링크 색 변하게 하는건데 왜 안바뀌지</p>
 
 <input type = "button" value = "night" onclick = "
 var DocQue= document.querySelector('body').style
@@ -63,7 +53,7 @@ DocQue.backgroundColor = 'white';
 DocQue.color = 'black';
 this.value = 'night';
 
-link_color('purple');
+link_color = 'purple';
 }
 
 else{
@@ -71,7 +61,7 @@ DocQue.backgroundColor = 'black';
 DocQue.color = 'white';
 this.value = 'day';
 
-link_color('powderblue')
+link_color = 'powderblue';
 }">
 
 &lt;&lt;&lt; toggle
@@ -92,7 +82,6 @@ document.querySelector('body').style.color='white';
 document.querySelector('.welcome').style.color='blue';">
 
 왜 div는 blue가 되고 span은 하얄까..-->
-
 <br><br>
 <div>Comparison Operators & Boolean</div>
 <p>
@@ -118,19 +107,14 @@ else
 
 <p>Study for making website<br>about RiverLevel!</p>
 
-<p>
-<script src='crawler_youtube_example_1.js'>
-</script>
-</p>
-
 <p><script>
 document.write('1+1 = ', 1+1);
 document.write("<br>document.write");
 </script></p>
 
 <p>
-<script src='crawler_youtube_example_2.js'>
-</script>
+<script src='crawler_youtube_example_2.js'></script>
+함수 만들어본건데 이걸 응용해보자..언젠간?
 </p>
 
 <div class="welcome"></div>
