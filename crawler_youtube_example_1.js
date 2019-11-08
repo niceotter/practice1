@@ -2,6 +2,6 @@ obj={"Joker":"8.8","Terminator: Dark Fate":"6.5","The King":"7.4","Doctor Sleep"
 
 var keys = Object.keys(obj);
 //console.log (obj);
-for (var i = 0; i < 98; i++) {
+for (var i in keys) {
     document.write(keys[i]+'의 평점은 ', obj[keys[i]], '<br>');
 };

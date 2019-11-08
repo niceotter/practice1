@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 
+<link rel="stylesheet" href="./practice3.css">
+
 <style>
 #grid {
 display:grid;
@@ -11,11 +13,12 @@ grid-template-columns:45% 45%;
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="practice3.js"></script>
 
 <script>
 var EE = $(document)
-EE.on('click', 'div a', function() {alert('a method'); css.background-color('yellow');});
-EE.on('click', '#id', function() {alert('div method');});
+EE.on('click', '#id a', function() {alert('div method'); this.style.backgroundColor='yellow';});
+EE.on('click', 'span a', function() {alert('span method');});
 </script>
 
 <title>title</title></head>
@@ -24,8 +27,8 @@ EE.on('click', '#id', function() {alert('div method');});
 <div id='grid'>
 <div id='sector1'>
 <h3>Jquery 3 &lt;on&gt; method</h3>
-<div><a href="javascript:void(0);">Aaaaaaaaa</a></div>
-<span id='id'><a href="javascript:void(0);">Bbbbbbbbbbbbbb</a></span>
+<div id="id"><a href="#">Aaaaaaaaa</a></div>
+<span><a href="#">Bbbbbbbbbbbbbb</a></span>
 
 <br>
 
@@ -114,6 +117,97 @@ document.write(key + ' : ' + this[key] + '<br>');
 };};};
 dict.showAll();
 </script>
+
+<h3>Floating Window</h3>
+<a href="#floatwindow" class="open">Displaying Floating Window</a>
+<div id="floatwindow">
+
+<a href="practice4.html" class="close"><img src="close.png" alt="닫힘"/></a>
+
+<dl>
+<dt>Making Floating Window</dt>
+<dd><img src="profile.jpg" width="70%"></dd>
+</dl>
+
+</div>
+
+<h3>Toggle Function</h3>
+
+<div>twin
+<input type = "button" value = "day" onclick = "
+document.querySelector('body').style.backgroundColor='white';
+document.querySelector('body').style.color='black';">
+<input type = "button" value = "night" onclick = "
+document.querySelector('body').style.backgroundColor='black';
+document.querySelector('body').style.color='white';">
+</div>
+
+<input id="toggle" type = "button" value = "night" onclick = "
+    if (document.querySelector('#toggle').value === 'night') {
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        document.querySelector('#toggle').value = 'day';
+    } else {
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        document.querySelector('#toggle').value = 'night';
+    }
+">
+
+<input type = "button" value = "night" onclick = "
+    if (this.value === 'night') {
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        this.value = 'day';
+    } else {
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        this.value = 'night';
+    }
+">
+
+<input type = "button" value = "night" onclick = "
+    var target = document.querySelector('body');
+    if (this.value === 'night') {
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        this.value = 'day';
+    } else {
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        this.value = 'night';
+    }
+">
+
+<input type = "button" value = "night" onclick = "
+    var target = document.querySelector('body');
+    if (this.value === 'night') {
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        this.value = 'day';
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while (i < alist.length) {
+            alist[i].style.color = 'powderblue';
+            i=i+1;
+        }
+    } else {
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        this.value = 'night';
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while (i < alist.length) {
+            alist[i].style.color = 'blue';
+            i=i+1;
+        }
+    }
+">
+
+<input type = "button" value = "night" onclick = "toggle1(this)">
+
+<input type = "button" value = "night" onclick = "toggle2(this)">
+
 
 </div>
 </div>

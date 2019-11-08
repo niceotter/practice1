@@ -10,6 +10,25 @@ $(document).on('click', '#navigation li', function() {
 $('#navigation li').removeClass('selected');
 $(this).addClass('selected');
 })
+
+function setColor(color) {
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while (i < alist.length) {
+        alist[i].style.color = color;
+        i=i+1;}}
+function toggle2(self) {
+    var target = document.querySelector('body');
+    if (self.value === 'night') {
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        self.value = 'day';
+        setColor('powderblue');
+    } else {
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        self.value = 'night';
+        setColor('blue');}}
 </script>
 
 <link rel="stylesheet" href="practice1.css">
@@ -26,86 +45,51 @@ $(this).addClass('selected');
 <li class="selected">css</li>
 <li>javascript</li>
 </ul>
-<br>
-<br>
-<ol>
-<li><a href="javascript:void(0);">html</a></li>
-<li><a href="javascript:void(0);">css</a></li>
-<li><a href="javascript:void(0);">javascript</a></li>
-</ol>
-<p style="text-decoration:underline">javascript:void의 밑줄은 지우고 여기 밑줄은 생기게 하기</p>
-<p id="intro">ohhoho</p>
+
+<br><br>
+
+<p>html로 가져갈 값  <span id="intro">12345</span></p>
 <strong>This is <u>Test Page</u>.</strong>
 <br>
 <script>
 var myElement = document.getElementById("intro");
-document.write("The text from the intro paragraph is " + myElement.innerHTML);
+document.write("getElementById로 가져온 값 : " + myElement.innerHTML);
 </script>
-<br>
 
-<p><a href="https://opentutorials.org/course/1375/6656">제어 대상 찾기</a>라는 코딩 강의인데 이걸 왜 여기에다 적어놨었지..</p>
-<p>아 아니구나 <a href="https://opentutorials.org/module/3180/18881">이거</a>구나 아래에 토글 누를때 링크 색 변하게 하는건데 왜 안바뀌지</p>
+<br><br>
 
-<input type = "button" value = "night" onclick = "
-var DocQue= document.querySelector('body').style
-if (this.value === 'day'){
-DocQue.backgroundColor = 'white';
-DocQue.color = 'black';
-this.value = 'night';
-
-link_color = 'purple';
-}
-
-else{
-DocQue.backgroundColor = 'black';
-DocQue.color = 'white';
-this.value = 'day';
-
-link_color = 'powderblue';
-}">
-
-&lt;&lt;&lt; toggle
-<br>
-document.querySelector('#~~')는 this로 치환가능
-<br>
-document.querySelector('body').style는 var ~~로 치환가능
-<br>
-
-<!--
-
+<div>
 <input type = "button" value = "day" onclick = "
 document.querySelector('body').style.backgroundColor='white';
 document.querySelector('body').style.color='black';">
 <input type = "button" value = "night" onclick = "
 document.querySelector('body').style.backgroundColor='black';
 document.querySelector('body').style.color='white';
-document.querySelector('.welcome').style.color='blue';">
+document.querySelectorAll('.welcome')[0].style.color='blue';
+document.querySelectorAll('.welcome')[1].style.color='blue';">
+</div>
 
-왜 div는 blue가 되고 span은 하얄까..-->
 <br><br>
+
+<input type = "button" value = "night" onclick = "toggle2(this)">
+&lt;&lt;&lt;<a href="practice3.html">토글 기능 변천사</a><br>
+document.querySelector('#~~')는 this로 치환가능<br>
+document.querySelector('body').style는 var ~~로 치환가능
+
+<br><br>
+
 <div>Comparison Operators & Boolean</div>
 <p>
 등호(===)와 부등호(태그와 헷갈리면 안되니 less then, greater then이라는 뜻의 & lt; & gt;를 사용)를 쓰면 Boolean이라고 통칭되는 True와 False로 응답
 </p>
+
 <br>
-
-<div>Conditional Statements</div>
-<p>
-if()
-{
-;}
-else
-{
-;}
-</p>
-
-
 
 <input type="button" value="hi" onclick="alert('hi')">
 <input type="text" onchange="alert('onchange')">
 <input type="text" onkeydown="alert('onkeydown')">
 
-<p>Study for making website<br>about RiverLevel!</p>
+<span>Study for making website<br>about RiverLevel!</span>
 
 <p><script>
 document.write('1+1 = ', 1+1);
