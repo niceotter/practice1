@@ -3,12 +3,10 @@ $(function () {
         $("#floatwindow").fadeIn("fast");
         return false;
     });
-
     $("#floatwindow a.close").click(function() {
         $("#floatwindow").fadeOut("fast");
         return false;
     });
-
     $("#floatwindow dl dt").mousedown(function(e) {
         $("#floatwindow")
             .data("clickPointX", e.pageX-$("#floatwindow").offset().left)
@@ -20,6 +18,10 @@ $(function () {
     }).mouseup(function() {
         $(document).unbind("mousemove");
     });
+    $(".explanation").hover(
+        function(){$("div#information").css("display", "block");},
+        function(){$("div#information").css("display", "none");}
+    );
 });
 
 function toggle1(self) {
@@ -69,3 +71,5 @@ function toggle2(self) {
         setColor('blue');
     }
 }
+
+

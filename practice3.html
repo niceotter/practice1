@@ -5,13 +5,6 @@
 
 <link rel="stylesheet" href="./practice3.css">
 
-<style>
-#grid {
-display:grid;
-grid-template-columns:45% 45%;
-}
-</style>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="practice3.js"></script>
 
@@ -21,7 +14,7 @@ EE.on('click', '#id a', function() {alert('div method'); this.style.backgroundCo
 EE.on('click', 'span a', function() {alert('span method');});
 </script>
 
-<title>title</title></head>
+<title>practice3</title></head>
 
 <body>
 <div id='grid'>
@@ -118,8 +111,8 @@ document.write(key + ' : ' + this[key] + '<br>');
 dict.showAll();
 </script>
 
-<h3>Floating Window</h3>
-<a href="#floatwindow" class="open">Displaying Floating Window</a>
+<h3>Floating·Hovering Window</h3>
+<a href="#" class="open">Displaying Floating Window</a>
 <div id="floatwindow">
 
 <a href="practice4.html" class="close"><img src="close.png" alt="닫힘"/></a>
@@ -130,6 +123,12 @@ dict.showAll();
 </dl>
 
 </div>
+
+<img class="explanation" src="information.png" width="20px">
+<div id="information"><dl>
+<dd>단어 설명창
+​</dd>
+</dl></div>
 
 <h3>Toggle Function</h3>
 
@@ -208,6 +207,18 @@ document.querySelector('body').style.color='white';">
 
 <input type = "button" value = "night" onclick = "toggle2(this)">
 
+
+</div>
+<div id='sector3'>
+
+<h3>wave graphic</h3>
+<p>y-기본값 따와서 애니메이션 구동시켜 보기</p>
+<div id=one>
+<div id=two></div>
+<div id=three></div>
+<div id=four></div>
+<div id=five></div>
+</div>
 
 </div>
 </div>
